@@ -12,7 +12,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -21,12 +21,34 @@ header {
     background-color: #fff;
     padding: 4px 0;
     border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #FFFFFF;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-right a {
+    color: #000000;
+    margin-right: 15px;
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+.header-right a:hover {
+    color: #FF6442;
+    
 }
 
 .logo {
@@ -79,16 +101,19 @@ header .container {
     background-color: rgb(37, 103, 226);
     color: #fff;
     padding: 24px 40px;
-
+    transition: background-color 0.3s ease;
     font-size: 1.5em;
     font-weight: 500;
     letter-spacing: -1px;
     margin-bottom: 20px;
     line-height:95%;
-
     border: none;
     border-radius: 48px;
     cursor: pointer;
+}
+
+.hero .get-started-btn:hover {
+    background-color: #FF6442;
 }
 
 .divider {
@@ -137,9 +162,16 @@ header .container {
     font-size: 1em;
 }
 
-.file-indexing, .contribute {
+.file-indexing {
     text-align: center;
     padding: 50px 0;
+}
+
+.contribute {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #FF6442;
+    color: #FFFFFF;
 }
 
 .file-indexing h2, .contribute h2 {
@@ -177,6 +209,25 @@ footer {
     border-top: 1px solid #ddd;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer-logo {
+    height: 32px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
 footer p {
     font-size: 0.9em;
     color: #777;
@@ -189,7 +240,11 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 2.5em;
+        font-size: 4em;
+        font-weight: 500;
+        letter-spacing: -4px;
+        margin-bottom: 20px;
+        line-height:95%;
     }
 
     .hero p, .file-indexing p, .contribute p {
