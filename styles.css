@@ -253,14 +253,13 @@ footer p {
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    text-align: center;
+    padding: 20px;
 }
 
 .image-container img {
     border: 5px solid #4CAF50; /* Border color */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    display: inline-block;
 }
