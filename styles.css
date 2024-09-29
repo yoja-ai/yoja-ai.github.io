@@ -233,6 +233,11 @@ footer p {
     color: #777;
 }
 
+footer a {
+    font-size: 0.9em;
+    color: #777;
+}
+
 @media (max-width: 768px) {
     .accounts {
         flex-direction: column;
@@ -262,4 +267,55 @@ footer p {
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
     display: inline-block;
+}
+
+.terms {
+    text-align: left;
+    padding: 50px 0;
+}
+
+#terms {
+    padding: 40px 20px;
+    margin: 40px 0;
+}
+
+#terms h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#terms h3 {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #FF6442;
+}
+
+#terms p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#terms a {
+    color: #FF6442;
+    text-decoration: underline;
+}
+
+#terms a:hover {
+    color: #E55638; /* Darker shade on hover */
+}
+
+#terms ul {
+    margin-left: 40px; /* Indentation for list */
+    list-style-type: disc; /* Standard bullet points */
+}
+
+#terms ul li {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
