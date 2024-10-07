@@ -96,6 +96,65 @@
         </br></br>
     </section>
 
+    <div class="divider"></div>
+
+    <section class="file-indexing">
+        <div class="container">
+            <h2>FAQ</h2>
+            <p>Yoja users' most frequently asked questions.</p>
+
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-title">Why does my query not find any relevant files for context?</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Upon initial signup, Yoja begins the process of reading your files and generating mathematical representations called embeddings. Later, these embeddings are used to find the paragraphs that are most relevant to your chat query. This process is resource and time intensive and could take hours or even days. Indexing progress is displayed in your yoja page as shown in callout (1) below </p>
+                    <img src="images/5-ui-features.png" alt="Yoja UI Features">
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-title">How do I delete a single chat?</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>The left sidebar contains the chat history. If you hover over the chat that you want to delete, three dots appear in the right edge of the chat. When you move your mouse over the three dots, you will see a popup with the menu items 'Rename', 'Export' and 'Delete'. You can delete that single chat using the 'Delete' menu item.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-title">How do I delete the complete history of all chats?</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>In the left sidebar, at the bottom, the username is displayed along with the profile picture if one is publicly available on Google. If you mouse over this section, a menu with two items appears. The items are 'Settings' and 'Sign Out'. The settions menu that pops up when you press 'Settings' displays software versions and has functionality to connect to 'Dropbox' and also to delete all chats. Callout (2) below shows where this menu can be accessed from</p>
+                    <img src="images/5-ui-features.png" alt="Yoja UI Features">
+                </div>
+            </div>
+        </div>
+        </br></br>
+    </section>
+    
+    <script>
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+    
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.classList.remove("fa-chevron-down");
+                icon.classList.add("fa-chevron-right");
+            } else {
+                answer.style.display = "block";
+                icon.classList.remove("fa-chevron-right");
+                icon.classList.add("fa-chevron-down");
+            }
+        }
+    </script>
+
     <section class="contribute">
         <div class="container">
             <h2>Contribute to Yoja</h2>
