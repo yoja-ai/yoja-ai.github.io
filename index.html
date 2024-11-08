@@ -11,12 +11,13 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoja GDrive AI Search/Chat</title>
+    <title>Yoja - Google Drive AI Search and Chat</title>
     <link rel="icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..700&display=swap" rel="stylesheet">
     <script src="font-awesome/js/all.min.js"></script>
     <link rel="stylesheet" href="font-awesome/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -35,31 +36,47 @@
                 </a>
             </div>
         </div>
-    </header>      
+    </header>
 
     <section class="hero">
         <div class="container">
-            <h1>AI Search and Chat for GDrive</h1>
-            <p>Dropbox too!</p>
+            <span class="bg-gray-200 text-sm text-gray-600 py-1 px-3 rounded-full">👋 Say hello to Yoja AI for Google Drive</span>
+            <h1>AI search and chat <br> for Google Drive</h1>
+            <p>Interact with your private data with minimal setup.</p>
             <button class="get-started-btn" onclick="window.location.href='https://chat.yoja.ai/'">Get Started <i class="fas fa-arrow-right"></i></button>
         </div>
     </section>
 
     <div class="divider"></div>
 
-    <section class="file-indexing">
-        <div class="container">
-            <h2>How does Yoja work?</h2>
+    <section class="container mx-auto px-6 pb-20">
+        <div class="text-left mb-12">
+            <span class="bg-gray-200 text-sm text-gray-600 py-1 px-3 rounded-full">Features</span>
+            <h2 class="text-3xl font-bold mt-4 text-gray-900">The AI search and chat assistant that elevates interactions with your private data</h2>
+            <p class="text-gray-600 mt-4">Yoja monitors your Google Drive and creates a private and confidential index of the contents, which enables AI search and chat.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-4">
+                <span class="bg-gray-200 text-sm text-gray-600 py-1 px-3 rounded-full">AI Search</span>
+                <h3 class="text-2xl font-semibold text-gray-900">Search your Google Drive contents with NLP</h3>
+                <p class="text-gray-600">With AI search, you can search your Google Drive contents with a natural language interface.</p>
+                <p class="text-gray-600">Simply ask Yoja a question like, “List all the PowerPoint files that include the 2024 second quarter sales figures.”</p>
+                </br>
+                <a href="https://chat.yoja.ai/" class="text-blue-600 font-medium hover:underline">Try Yoja AI Search &rarr;</a>
+            </div>
+            <div class="bg-gray-200 h-64 rounded-lg"></div>
 
-            <p>Yoja monitors your GDrive and creates a private and confidential index of the contents. This index enables AI Search and AI Chat of your GDrive contents</p>
-            <p> AI Search enables you to search your GDrive contents with a natural language interface, for example, <b>'list all the powerpoint files that include the 2024 second quarter sales figures'</b></p>
-
-            <p> AI Chat enables generative AI capabilities - you can say things such as <b>'Generate content for the board meeting highlighting 2024 sales figures'</b></p>
-
-            <p>No need to upload specific files before chatting. No reason to traverse the directory hierarchy in your treasured private files. You don’t have to remember to update Yoja when you add, modify, or delete files from your google drive or dropbox.</p>
-
-            <p>Rest assured, the data will remain secure, will not be shared with others for training or other purposes, and will be removed if for whatever reason you choose to unsubscribe from Yoja.</p>
-
+            <div class="space-y-4">
+                <span class="bg-gray-200 text-sm text-gray-600 py-1 px-3 rounded-full">AI Chat</span>
+                <h3 class="text-2xl font-semibold text-gray-900">Leverage generative AI capabilities via chat</h3>
+                <p class="text-gray-600">With AI chat, you can leverage Yoja’s generative AI capabilities.</p>
+                <p class="text-gray-600">Simply ask Yoja a question like, “Generate content for the board meeting highlighting 2024 sales figures.”</p>
+                </br>
+                <a href="https://chat.yoja.ai/" class="text-blue-600 font-medium hover:underline">Try Yoja AI Chat &rarr;</a>
+            </div>
+            <div class="bg-gray-200 h-64 rounded-lg"></div>
+        </div>
     </section>
 
     <div class="divider"></div>
