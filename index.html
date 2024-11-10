@@ -17,35 +17,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
 
     <!-- Header -->
     <header class="bg-white sticky top-0 z-50 border-b border-gray-200">
-        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html">
-                <img src="images/Yoja Logo Light.svg" alt="Yoja Logo" class="h-8">
-            </a>
-            <div class="flex justify-center gap-2">
-                <a href="help.html">
-                    <button class="hover:bg-gray-200 text-gray-500 px-4 py-1 text-lg font-medium rounded-md transition flex items-center">
-                        Help
-                    </button>
+        <nav class="bg-white">
+            <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center">
+                    <img src="images/Yoja Logo Light.svg" class="h-7" alt="Yoja Logo" />
                 </a>
-                <a href="https://chat.yoja.ai/">
-                    <button class="bg-gray-800 hover:bg-orange-600 text-white px-4 py-1 text-lg font-medium rounded-md transition flex items-center">
-                        Start
-                    </button>
-                </a>
+                <div class="flex items-center gap-4">
+                    <div class="mt-2 mr-2 sm:inline-block">
+                        <a class="github-button" href="https://github.com/yoja-ai/yoja" data-size="large" data-icon="octicon-star" data-show-count="true" aria-label="Star yoja-ai/yoja on GitHub">Star</a>
+                    </div>
+                    <a href="help.html" class="bg-white text-gray-600 border border-gray-300 hover:bg-orange-600 hover:border-orange-600 hover:text-white font-medium rounded-lg text-sm px-4 py-2">Log in</a>
+                    <a href="https://chat.yoja.ai/" class="bg-gray-800 hover:bg-orange-600 text-white font-medium rounded-lg text-sm px-4 py-2">Sign up</a>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- Hero -->
     <section class="text-center py-24 bg-white">
         <div class="container mx-auto px-6">
-            <span class="bg-orange-100 text-orange-800 py-1 px-4 font-medium rounded-full text-sm">Introducing Yoja AI</span>
+            <span class="bg-orange-100 text-orange-800 py-1 px-4 font-medium rounded-full text-sm"><i class="fa-solid fa-bolt mr-2"></i>Introducing Yoja AI</span>
             
             <div class="max-w-[1000px] mx-auto">
                 <h1 class="font-['Lexend'] text-5xl md:text-7xl font-medium tracking-tighter leading-tight mt-6">
@@ -57,12 +55,12 @@
 
             <div class="flex justify-center gap-4 mt-8">
                 <a href="https://chat.yoja.ai/">
-                    <button class="bg-gray-800 hover:bg-orange-600 text-white px-8 py-2 text-lg font-medium rounded-md transition flex items-center">
+                    <button class="bg-gray-800 border border-gray-800 hover:bg-orange-600 hover:border-orange-600 text-white px-8 py-2 text-lg font-medium rounded-md transition flex items-center">
                         <i class="fa-brands fa-google mr-3"></i></i>Login with Google
                     </button>
                 </a>
                 <a href="https://github.com/yoja-ai/yoja" target="_blank">
-                    <button class="bg-white text-gray-800 border border-gray-800 px-8 py-2 text-lg font-medium rounded-md transition flex items-center hover:bg-gray-200">
+                    <button class="bg-white text-gray-800 border border-gray-800 hover:bg-orange-600 hover:border-orange-600 hover:text-white px-8 py-2 text-lg font-medium rounded-md transition flex items-center">
                         <i class="fab fa-github mr-3"></i>View on GitHub
                     </button>
                 </a>
@@ -73,6 +71,7 @@
         </div>
     </section>
 
+    <!-- Features Section -->
     <div class="container mx-auto px-6 py-8">
         <div class="text-left mb-12">
             <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-sm">Features</span>
@@ -102,34 +101,63 @@
             <img src="images/Feature Image 2.png" alt="Yoja App" class="w-auto h-128 rounded-lg">
         </div>
     </div>
-
+    
     <!-- FAQ Section -->
-    <section class="container mx-auto px-6 py-20 text-left">
-        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">FAQ</h2>
-        <div>
-            <button class="faq-question w-full bg-gray-500 text-white px-6 py-4 rounded-md text-left flex justify-between items-center mb-4 hover:bg-orange-600 transition">
-                <span>Why does my query not find any relevant files for context?</span>
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <div class="faq-answer hidden px-6 py-4 text-gray-500">
-                <p>Answer</p>
+    <section class="container mx-auto px-6 py-36 text-left">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
+        <div id="faq-accordion">
+            <!-- FAQ Item 1 -->
+            <div class="border-b border-gray-200">
+                <button type="button" class="w-full flex items-center justify-between py-5 text-left font-medium text-gray-600 transition-colors hover:text-orange-600" data-accordion-target="#faq-body-1" aria-expanded="false" aria-controls="faq-body-1">
+                    <span>Why does my query not find any relevant files for context?</span>
+                    <svg class="w-5 h-5 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div id="faq-body-1" class="hidden pb-4 text-gray-600">
+                    <p class="mb-2">Upon initial signup, Yoja begins the process of reading your files and generating mathematical representations called embeddings. Later, these embeddings are used to find the paragraphs that are most relevant to your chat query. This process is resource and time intensive and could take hours or even days.</p>
+                </div>
             </div>
-            <button class="faq-question w-full bg-gray-500 text-white px-6 py-4 rounded-md text-left flex justify-between items-center mb-4 hover:bg-orange-600 transition">
-                <span>How do I delete a single chat?</span>
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <div class="faq-answer hidden px-6 py-4 text-gray-500">
-                <p>Answer</p>
+            <!-- FAQ Item 2 -->
+            <div class="border-b border-gray-200">
+                <button type="button" class="w-full flex items-center justify-between py-5 text-left font-medium text-gray-600 transition-colors hover:text-orange-600" data-accordion-target="#faq-body-2" aria-expanded="false" aria-controls="faq-body-2">
+                    <span>How do I delete a conversation with Yoja?</span>
+                    <svg class="w-5 h-5 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div id="faq-body-2" class="hidden pb-4 text-gray-600">
+                    <p class="mb-2">The left sidebar contains the chat history. If you hover over the chat that you want to delete, three dots appear in the right edge of the chat. When you move your mouse over the three dots, you will see a popup with the menu items 'Rename', 'Export' and 'Delete'. You can delete that single chat using the 'Delete' menu item.</p>
+                </div>
             </div>
-            <button class="faq-question w-full bg-gray-500 text-white px-6 py-4 rounded-md text-left flex justify-between items-center mb-4 hover:bg-orange-600 transition">
-                <span>How do I delete the complete history of all chats?</span>
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <div class="faq-answer hidden px-6 py-4 text-gray-500">
-                <p>Answer</p>
+            <!-- FAQ Item 3 -->
+            <div class="border-b border-gray-200">
+                <button type="button" class="w-full flex items-center justify-between py-5 text-left font-medium text-gray-600 transition-colors hover:text-orange-600" data-accordion-target="#faq-body-3" aria-expanded="false" aria-controls="faq-body-3">
+                    <span>How do I delete all conversations and clear history?</span>
+                    <svg class="w-5 h-5 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div id="faq-body-3" class="hidden pb-4 text-gray-600">
+                    <p class="mb-2">In the left sidebar, at the bottom, the username is displayed along with the profile picture if one is publicly available on Google. If you mouse over this section, a menu with two items appears. The items are 'Settings' and 'Sign Out'. The settions menu that pops up when you press 'Settings' displays software versions and has functionality to connect to 'Dropbox' and also to delete all chats.</p>
+                </div>
             </div>
         </div>
     </section>
+    <script>
+        // Simple accordion toggle
+        document.querySelectorAll('[data-accordion-target]').forEach(button => {
+            button.addEventListener('click', () => {
+                const target = document.querySelector(button.getAttribute('data-accordion-target'));
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                // Toggle visibility and rotate icon
+                button.setAttribute('aria-expanded', !isExpanded);
+                target.classList.toggle('hidden');
+                button.querySelector('svg').classList.toggle('rotate-180');
+            });
+        });
+    </script>
 
     <!-- CTA -->
     <section class="bg-orange-600 text-white text-center py-20">
@@ -146,32 +174,33 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-white py-4 border-t border-gray-200">
-        <div class="container mx-auto px-6 flex flex-wrap justify-between items-center">
-            <a href="index.html"><img src="images/Yoja Icon - Mono.svg" alt="Yoja Logo" class="h-8"></a>
-            <div class="flex items-center space-x-5">
-                <a href="https://github.com/yoja-ai/yoja" target="_blank" class="text-gray-500 hover:text-orange-600 text-2xl">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <!-- Left: Logo -->
+            <div class="flex items-center space-x-4">
+                <a href="index.html">
+                    <img src="images/Yoja Icon - Mono.svg" alt="Yoja Logo" class="h-6">
+                </a>
+                <p class="text-gray-500 text-sm">&copy; 2024 Yoja • Made in Silicon Valley</p>
+            </div>
+            
+            <!-- Center: Navigation Links -->
+            <div class="flex flex-col md:flex-row md:space-x-8 items-center text-sm text-gray-500 space-y-2 md:space-y-0">
+                <a href="privacypolicy.html" class="hover:underline">Privacy Policy</a>
+                <a href="termsofservice.html" class="hover:underline">Terms of Service</a>
+            </div>
+            
+            <!-- Right: Social Icons -->
+            <div class="flex space-x-4 text-gray-500">
+                <a href="https://github.com/yoja-ai/yoja" target="_blank" class="hover:text-orange-600 text-2xl">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/company/yoja-ai" target="_blank" class="text-gray-500 hover:text-orange-600 text-2xl">
+                <a href="https://www.linkedin.com/company/yoja-ai" target="_blank" class="hover:text-orange-600 text-2xl">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
-            <a href="privacypolicy.html">Privacy Policy</a>
-            <a href="termsofservice.html">Terms of Service</a>
-            <div class="text-center space-x-6 text-gray-500">
-                <p>&copy; 2024 Yoja • Made in Silicon Valley</p>
-            </div>
         </div>
-    </footer>
-
-    <script>
-        function toggleFaq(element) {
-            const answer = element.nextElementSibling;
-            answer.classList.toggle("hidden");
-        }
-    </script>
+    </footer>    
 </body>
 
 </html>
