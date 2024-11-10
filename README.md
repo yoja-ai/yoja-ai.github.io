@@ -1,5 +1,5 @@
-<h2 align="left">Welcome to Yoja AI</h2>
-<p align="left">A personal assistant for your digital life.</p>
+<h2 align="left">Welcome to Yoja</h2>
+<p align="left">AI search and chat for Google Drive</p>
 
 ![Yoja Gradient Banner](https://github.com/user-attachments/assets/08e8711c-7c2e-41e5-8845-595eb16585ee)
 
