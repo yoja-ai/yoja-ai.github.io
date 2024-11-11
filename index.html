@@ -24,21 +24,37 @@
 
     <!-- Header -->
     <header class="bg-white sticky top-0 z-50 border-b border-gray-200">
-        <nav class="bg-white">
-            <div class="container mx-auto px-6 py-3 flex items-center justify-between">
-                <a href="index.html" class="flex items-center">
-                    <img src="images/Yoja Logo Light.svg" class="h-7" alt="Yoja Logo" />
-                </a>
-                <div class="flex items-center gap-4">
-                    <div class="mt-2 mr-2 sm:inline-block">
-                        <a class="github-button" href="https://github.com/yoja-ai/yoja" data-size="large" data-icon="octicon-star" data-show-count="true" aria-label="Star yoja-ai/yoja on GitHub">Star</a>
+        <div id="gradient-border" class="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-orange-400 to-purple-500 opacity-0 transition-opacity duration-300"></div>
+            <nav class="bg-white">
+                <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/Yoja Logo Light.svg" class="h-7" alt="Yoja Logo" />
+                    </a>
+                    <div class="flex items-center gap-4">
+                        <div class="mt-2 mr-2 sm:inline-block">
+                            <a class="github-button" href="https://github.com/yoja-ai/yoja" data-size="large" data-icon="octicon-star" data-show-count="true" aria-label="Star yoja-ai/yoja on GitHub">Star</a>
+                        </div>
+                        <a href="https://chat.yoja.ai/" class="bg-white text-gray-600 border border-gray-300 hover:bg-orange-600 hover:border-orange-600 hover:text-white font-medium rounded-lg text-sm px-4 py-2">Log in</a>
+                        <a href="https://chat.yoja.ai/" class="bg-gray-800 hover:bg-orange-600 text-white font-medium rounded-lg text-sm px-4 py-2">Sign up</a>
                     </div>
-                    <a href="help.html" class="bg-white text-gray-600 border border-gray-300 hover:bg-orange-600 hover:border-orange-600 hover:text-white font-medium rounded-lg text-sm px-4 py-2">Log in</a>
-                    <a href="https://chat.yoja.ai/" class="bg-gray-800 hover:bg-orange-600 text-white font-medium rounded-lg text-sm px-4 py-2">Sign up</a>
                 </div>
-            </div>
-        </nav>
+            </nav>
     </header>
+    <script>
+        // Get the header and gradient border elements
+        const header = document.querySelector('header');
+        const gradientBorder = document.getElementById('gradient-border');
+      
+        // Listen for the scroll event
+        window.addEventListener('scroll', function() {
+          // Check if the scroll position is greater than 50px (you can adjust this value)
+          if (window.scrollY > 50) {
+            gradientBorder.classList.add('opacity-100'); // Show the gradient border
+          } else {
+            gradientBorder.classList.remove('opacity-100'); // Hide the gradient border
+          }
+        });
+    </script>      
 
     <!-- Hero -->
     <section class="text-center py-24 bg-white">
@@ -74,7 +90,7 @@
     <!-- Features Section -->
     <div class="container mx-auto px-6 py-8">
         <div class="text-left mb-12">
-            <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-sm">Features</span>
+            <span class="bg-orange-100 text-orange-800 py-1 px-4 font-medium rounded-full text-sm">Features</span>
             <h2 class="text-3xl font-bold mt-4 text-gray-900">How does Yoja work?</h2>
             <p class="text-gray-600 mt-4">Yoja monitors your Google Drive and creates a private and confidential index of the contents, enabling AI search and chat.</p>
         </div>
@@ -82,7 +98,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Feature 1 -->
             <div class="space-y-4">
-                <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-sm">AI Search</span>
+                <span class="bg-orange-100 text-orange-800 py-1 px-4 font-medium rounded-full text-sm">AI Search</span>
                 <h3 class="text-2xl font-semibold text-gray-900">Search your Google Drive contents with NLP</h3>
                 <p class="text-gray-600">With AI search, you can search your Google Drive contents with a natural language interface.</p>
                 </br>
@@ -92,7 +108,7 @@
 
             <!-- Feature 2 -->
             <div class="space-y-4">
-                <span class="bg-gray-200 text-gray-600 py-1 px-3 rounded-full text-sm">AI Chat</span>
+                <span class="bg-orange-100 text-orange-800 py-1 px-4 font-medium rounded-full text-sm">AI Chat</span>
                 <h3 class="text-2xl font-semibold text-gray-900">Leverage generative AI capabilities via chat</h3>
                 <p class="text-gray-600">With AI chat, you can leverage Yoja’s generative AI capabilities.</p>
                 </br>
@@ -160,7 +176,7 @@
     </script>
 
     <!-- CTA -->
-    <section class="bg-orange-600 text-white text-center py-20">
+    <section class="text-white text-center py-20" style="background-color: #FF6442;">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-white">Contribute to Yoja</h2>
             <p class="mt-4">Yoja is an MIT-licensed open-source project. Open a pull request on GitHub.</p>
@@ -186,13 +202,13 @@
             
             <!-- Center: Navigation Links -->
             <div class="flex flex-col md:flex-row md:space-x-8 items-center text-sm text-gray-500 space-y-2 md:space-y-0">
-                <a href="pages/privacypolicy.html" class="hover:underline">Privacy Policy</a>
-                <a href="pages/termsofservice.html" class="hover:underline">Terms of Service</a>
+                <a href="pages/privacy-policy.html" class="hover:underline">Privacy Policy</a>
+                <a href="pages/terms.html" class="hover:underline">Terms of Service</a>
             </div>
             
             <!-- Right: Social Icons -->
             <div class="flex space-x-4 text-gray-500">
-                <a href="https://github.com/yoja-ai/yoja" target="_blank" class="hover:text-orange-600 text-2xl">
+                <a href="https://github.com/yoja-ai" target="_blank" class="hover:text-orange-600 text-2xl">
                     <i class="fab fa-github"></i>
                 </a>
                 <a href="https://www.linkedin.com/company/yoja-ai" target="_blank" class="hover:text-orange-600 text-2xl">
