@@ -25,22 +25,47 @@
     <!-- Header -->
     <header class="bg-white sticky top-0 z-50 border-b border-gray-200">
         <div id="gradient-border" class="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-orange-400 to-purple-500 opacity-0 transition-opacity duration-300"></div>
-            <nav class="bg-white">
-                <div class="container mx-auto px-6 py-3 flex items-center justify-between">
-                    <a href="index.html" class="flex items-center">
-                        <img src="images/Yoja Logo Light.svg" class="h-7" alt="Yoja Logo" />
-                    </a>
-                    <div class="flex items-center gap-4">
-                        <div class="mt-2 mr-2 sm:inline-block">
-                            <a class="github-button" href="https://github.com/yoja-ai/yoja" data-size="large" data-icon="octicon-star" data-show-count="true" aria-label="Star yoja-ai/yoja on GitHub">Star</a>
-                        </div>
-                        <a href="https://chat.yoja.ai/" class="bg-white text-gray-600 border border-gray-300 hover:bg-orange-600 hover:border-orange-600 hover:text-white font-medium rounded-lg text-sm px-4 py-2">Log in</a>
-                        <a href="https://chat.yoja.ai/" class="bg-gray-800 hover:bg-orange-600 text-white font-medium rounded-lg text-sm px-4 py-2">Sign up</a>
-                    </div>
+        <nav class="bg-white">
+        <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+            <img src="images/Yoja Logo Light.svg" class="h-7" alt="Yoja Logo" />
+            </a>
+    
+            <!-- Buttons (hidden on small screens) -->
+            <div class="hidden sm:flex items-center gap-3">
+                <div class="mt-2 mr-2 sm:inline-block">
+                    <a class="github-button" href="https://github.com/yoja-ai/yoja" data-size="large" data-icon="octicon-star" data-show-count="true" aria-label="Star yoja-ai/yoja on GitHub">Star</a>
                 </div>
-            </nav>
+                <a href="https://chat.yoja.ai/" class="bg-white text-gray-600 border border-gray-300 hover:bg-orange-600 hover:border-orange-600 hover:text-white font-medium rounded-lg text-sm px-4 py-2">Login</a>
+                <a href="https://chat.yoja.ai/" class="bg-gray-800 hover:bg-orange-600 text-white font-medium rounded-lg text-sm px-4 py-2">Sign up</a>
+            </div>
+    
+            <!-- Hamburger Icon (visible on small screens) -->
+            <div class="sm:hidden">
+                <button id="hamburger-btn" class="focus:outline-none">
+                    <!-- Simple Hamburger Icon (3 lines) -->
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="sm:hidden hidden flex-col items-center gap-4 py-4">
+            <a href="https://chat.yoja.ai/" class="bg-gray-800 hover:bg-orange-600 text-white font-medium rounded-lg text-sm px-4 py-2">Get started</a>
+        </div>
+        </nav>
     </header>
     <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        });
+
         // Get the header and gradient border elements
         const header = document.querySelector('header');
         const gradientBorder = document.getElementById('gradient-border');
@@ -62,25 +87,25 @@
             <span class="bg-orange-100 text-orange-800 py-1 px-4 font-medium rounded-full text-sm"><i class="fa-solid fa-bolt mr-2"></i>Introducing Yoja AI</span>
             
             <div class="max-w-[1000px] mx-auto">
-                <h1 class="font-['Lexend'] text-5xl md:text-7xl font-medium tracking-tighter leading-tight mt-6">
+                <h1 class="font-['Lexend'] text-4xl md:text-7xl font-medium tracking-tighter leading-tight mt-6">
                     AI search and chat <br> for Google Drive
                 </h1>
             </div>
     
             <p class="text-lg text-gray-600 mt-6">Interact with your private data with minimal setup.</p>
 
-            <div class="flex justify-center gap-4 mt-8">
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                 <a href="https://chat.yoja.ai/">
-                    <button class="bg-gray-800 border border-gray-800 hover:bg-orange-600 hover:border-orange-600 text-white px-8 py-2 text-lg font-medium rounded-md transition flex items-center">
-                        <i class="fa-brands fa-google mr-3"></i></i>Login with Google
-                    </button>
+                  <button class="bg-gray-800 border border-gray-800 hover:bg-orange-600 hover:border-orange-600 text-white font-medium rounded-lg text-md px-6 py-2">
+                    <i class="fa-brands fa-google mr-3"></i>Login with Google
+                  </button>
                 </a>
                 <a href="https://github.com/yoja-ai/yoja" target="_blank">
-                    <button class="bg-white text-gray-800 border border-gray-800 hover:bg-orange-600 hover:border-orange-600 hover:text-white px-8 py-2 text-lg font-medium rounded-md transition flex items-center">
-                        <i class="fab fa-github mr-3"></i>View on GitHub
-                    </button>
+                  <button class="bg-white text-gray-800 border border-gray-800 hover:bg-orange-600 hover:border-orange-600 hover:text-white font-medium rounded-lg text-md px-6 py-2">
+                    <i class="fab fa-github mr-3"></i>View on GitHub
+                  </button>
                 </a>
-            </div>
+            </div>                           
 
             <img src="images/Yoja Hero Image.png" alt="Yoja App" class="w-full h-auto rounded-lg">
 
@@ -88,9 +113,8 @@
     </section>
 
     <!-- Features Section -->
-    <div class="container mx-auto px-6 py-8">
+    <div class="bg-gray-50 container mx-auto px-16 py-16 rounded-lg">
         <div class="text-left mb-12">
-            <span class="bg-orange-100 text-orange-800 py-1 px-4 font-medium rounded-full text-sm">Features</span>
             <h2 class="text-3xl font-bold mt-4 text-gray-900">How does Yoja work?</h2>
             <p class="text-gray-600 mt-4">Yoja monitors your Google Drive and creates a private and confidential index of the contents, enabling AI search and chat.</p>
         </div>
@@ -100,7 +124,7 @@
             <div class="space-y-4">
                 <span class="bg-orange-100 text-orange-800 py-1 px-4 font-medium rounded-full text-sm">AI Search</span>
                 <h3 class="text-2xl font-semibold text-gray-900">Search your Google Drive contents with NLP</h3>
-                <p class="text-gray-600">With AI search, you can search your Google Drive contents with a natural language interface.</p>
+                </i><p class="text-gray-600">With AI search, you can search your Google Drive contents with a natural language interface.</p>
                 </br>
                 <a href="https://chat.yoja.ai/" class="text-gray-900 font-medium hover:underline">Try Yoja AI Search &rarr;</a>
             </div>
@@ -176,13 +200,13 @@
     </script>
 
     <!-- CTA -->
-    <section class="text-white text-center py-20" style="background-color: #FF6442;">
+    <section class="text-gray-800 text-center py-20 bg-gray-100">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-white">Contribute to Yoja</h2>
+            <h2 class="text-3xl font-bold">Contribute to Yoja</h2>
             <p class="mt-4">Yoja is an MIT-licensed open-source project. Open a pull request on GitHub.</p>
             <div class="flex justify-center gap-4 mt-8">
                 <a href="https://github.com/yoja-ai/yoja" target="_blank">
-                    <button class="bg-gray-800 hover:bg-gray-600 text-white px-8 py-2 text-lg font-medium rounded-md transition flex items-center">
+                    <button class="bg-gray-800 hover:bg-orange-600 text-white font-medium rounded-lg text-md px-6 py-2">
                         <i class="fab fa-github mr-3"></i>View on GitHub
                     </button>
                 </a>
